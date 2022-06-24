@@ -1,1 +1,67 @@
-<p>navmenu works!</p>
+<div *ngIf="!isHandSet">
+  <ul class="nav-menu" fxLayout="row">
+    <li>Home</li>
+    <li [matMenuTriggerFor]="gettingStarted" fxLayoutAlign="center center">
+      Getting Started
+      <div style="text-decoration: none !important">
+        <mat-icon>expand_more</mat-icon>
+      </div>
+    </li>
+    <li [matMenuTriggerFor]="exploreMenu" fxLayoutAlign="center center">
+      Explore
+      <div style="text-decoration: none !important">
+        <mat-icon>expand_more</mat-icon>
+      </div>
+    </li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+</div>
+<div *ngIf="isHandSet">
+  <mat-nav-list>
+    <div style="margin: 10px">
+      <a class="nav-itm" mat-list-item> Home </a>
+      <a class="nav-itm" mat-list-item (click)="expandMenu('started')">
+        Getting Started &nbsp;<mat-icon>{{
+          !startedExpanded ? "expand_more" : "expand_less"
+        }}</mat-icon>
+      </a>
+      <div *ngIf="startedExpanded">
+        <a mat-list-item class="nav-itm">
+          <span style="min-width: 30px"></span> Link 1
+        </a>
+        <a mat-list-item class="nav-itm">
+          <span style="min-width: 30px"></span>Link 2
+        </a>
+      </div>
+      <a class="nav-itm" mat-list-item (click)="expandMenu('explore')">
+        Explore &nbsp;<mat-icon>{{
+          !exploreExpanded ? "expand_more" : "expand_less"
+        }}</mat-icon>
+      </a>
+      <div *ngIf="exploreExpanded">
+        <a mat-list-item class="nav-itm">
+          <span style="min-width: 30px"></span>Link 1
+        </a>
+        <a mat-list-item class="nav-itm">
+          <span style="min-width: 30px"></span>Link 2
+        </a>
+        <a mat-list-item class="nav-itm">
+          <span style="min-width: 30px"></span>Link 3
+        </a>
+      </div>
+      <a class="nav-itm" mat-list-item> About </a>
+      <a class="nav-itm" mat-list-item> Contact </a>
+    </div>
+  </mat-nav-list>
+</div>
+
+<mat-menu #gettingStarted="matMenu" class="customize">
+  <button class="nav-menu-itm" mat-menu-item>Link 1</button>
+  <button class="nav-menu-itm" mat-menu-item>Link 2</button>
+</mat-menu>
+<mat-menu #exploreMenu="matMenu" class="customize">
+  <button class="nav-menu-itm" mat-menu-item>Link 3</button>
+  <button class="nav-menu-itm" mat-menu-item>Link 4</button>
+  <button class="nav-menu-itm" mat-menu-item>Link 5</button>
+</mat-menu>

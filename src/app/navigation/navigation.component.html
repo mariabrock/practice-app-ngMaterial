@@ -1,1 +1,77 @@
-<p>navigation works!</p>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="'dialog'"
+    [mode]="'over'"
+  >
+    <mat-toolbar color="primary" class="nav-title">
+      <a routerLink="/">
+        <img alt="logo" src="./assets/images/yourlogohere(1).png" height="50" />
+      </a>
+    </mat-toolbar>
+    <app-navmenu [isHandSet]="isHandset$ | async"></app-navmenu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar
+      color="primary"
+      fxLayout="row"
+      class="nav-title"
+      fxLayoutGap="10"
+    >
+      <div fxFlex="30%" fxLayoutAlign="start center" style="padding-left: 30px">
+        <img alt="logo" src="./assets/images/yourlogohere(1).png" height="50" />
+      </div>
+      <div fxFlex="40%" fxLayoutAlign="start center">
+        <div *ngIf="(isHandset$ | async) === false">
+          <app-navmenu [isHandSet]="isHandset$ | async"></app-navmenu>
+        </div>
+      </div>
+      <div fxFlex="30%" fxLayoutAlign="end center">
+        <button
+          color="accent"
+          class="login-btn"
+          mat-flat-button
+          *ngIf="(isHandset$ | async) === false"
+        >
+          Login <mat-icon style="font-size: 20px">lock</mat-icon>
+        </button>
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async"
+        >
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar>
+    <div
+      class="search-nav"
+      fxLayout.lt-sm="column"
+      fxLayout="row"
+      fxLayoutAlign="center center"
+    >
+      <mat-form-field fxFlex="50%" appearance="outline" class="search-input">
+        <input
+          autocomplete="off"
+          matInput
+          type="search"
+          placeholder="Type here to search for Cheese"
+        />
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+      <div>&nbsp;<a href="javascript://nop">Advanced Search</a></div>
+    </div>
+    <div fxFlexFill fxLayout="column">
+      <div fxFlex class="main-content">
+        <router-outlet></router-outlet>
+      </div>
+      <div fxFlex="none">
+        <app-footer></app-footer>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

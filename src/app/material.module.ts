@@ -79,4 +79,4 @@ const MODULES = [
 
   ]
 })
-export class UiMaterialModule {}
+export class MaterialModule {}
