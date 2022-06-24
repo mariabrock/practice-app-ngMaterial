@@ -1,1 +1,96 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use 'colors' as pal;
+@include mat.core();
+@include mat.strong-focus-indicators((
+  border-style: dotted,
+  border-width: 4px,
+  border-radius: 2px,
+));
+
+$my-primary: mat.define-palette(pal.$md-vatheme, 500);
+$my-accent: mat.define-palette(pal.$md-vatheme, A200, A100, A400);
+
+$my-theme: mat.define-light-theme((
+  color: (
+    primary: $my-primary,
+    accent: $my-accent
+  )
+));
+
+@include mat.all-component-themes($my-theme);
+//@include mat.strong-focus-indicators-theme(purple);
+
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url('./assets/icons/Roboto.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/icons/Icons.woff2'); /* For IE6-8 */
+}
+
+body, html {
+  margin: 0px;
+  height: 100%;
+  background-color: map-get($my-primary, 500);
+  font-family: 'Roboto', sans-serif;
+}
+
+*::-webkit-scrollbar {
+  height: 4px;
+  width: 6px;
+  scrollbar-width: thin;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background: #f1f1f1;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #c0c0c0;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #c0c0c0;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
