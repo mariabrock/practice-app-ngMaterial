@@ -1,0 +1,36 @@
+.nav-menu {
+  cursor: pointer;
+  font-size: 0.90rem;
+  list-style: none;
+}
+
+.nav-menu li {
+  display: inline;
+  padding-left: 20px;
+}
+
+.nav-menu li:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+}
+
+::ng-deep .customize {
+  //#1b2a3e
+  //background-color: rgba(27, 42, 62, 0.90) !important;
+  min-width: 200px !important;
+  font-size: 0.90rem;
+  padding: 5px;
+  min-height: 100px !important;
+  cursor: pointer;
+}
+
+.nav-menu-itm {
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.nav-itm {
+  color: #0d6efd;
+  font-size: 0.90rem;
+}

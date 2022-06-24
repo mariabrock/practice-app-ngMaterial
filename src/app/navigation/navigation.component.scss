@@ -1,0 +1,27 @@
+.login-btn {
+  font-size: 0.80rem;
+}
+
+.search-nav {
+  padding-top: 5px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+//input outline color
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #000000 !important;
+}
+
+::ng-deep mat-form-field .mat-hint, input, ::placeholder, .mat-form-field-label  {
+    color: #606060;
+}
+
+.main-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.search-input {
+  min-width: 320px;
+}

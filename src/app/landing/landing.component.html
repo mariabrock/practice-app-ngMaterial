@@ -1,1 +1,156 @@
-<p>landing works!</p>
+<div
+  fxLayoutAlign="center center"
+  fxLayout="row"
+  class="nav-title"
+  fxLayoutGap="10"
+>
+  <div fxFlex="80%">
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="start stretch">
+      <div class="landing-main-content" fxFlex="70%">
+        <h3>Name/Title of Application</h3>
+        <p>
+          Fondue bocconcini babybel. Stilton cow bocconcini fromage frais
+          taleggio cream cheese emmental cheesy grin. Queso halloumi macaroni
+          cheese cheese and wine cheese and biscuits monterey jack cheesy grin
+          parmesan. Pepper jack.
+        </p>
+        <br />
+        <h3>A Header</h3>
+        <p>
+          Cut the cheese queso roquefort. Manchego caerphilly macaroni cheese
+          boursin brie who moved my cheese cheese strings cream cheese. Hard
+          cheese brie cheese triangles cut the cheese squirty cheese roquefort
+          smelly cheese gouda. Cheeseburger cheesecake lancashire babybel cheese
+          and biscuits boursin who moved my cheese rubber cheese. Roquefort
+          fromage. Blue castello edam melted cheese. Squirty cheese dolcelatte
+          squirty cheese brie fromage cheddar caerphilly cut the cheese.
+          Monterey jack melted cheese fromage frais boursin jarlsberg the big
+          cheese red leicester halloumi. Mascarpone croque monsieur cheese and
+          wine manchego cheddar jarlsberg fondue. Hard cheese stilton cheese
+          triangles. Airedale bocconcini boursin stinking bishop monterey jack
+          melted cheese cheese and wine jarlsberg. Brie cow the big cheese
+          babybel st. agur blue cheese ricotta cut the cheese everyone loves.
+          Cheese triangles.
+        </p>
+        <br />
+        <h3>Other Header – coming soon</h3>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <td style="background-color: #f0f0f0; font-weight: bold">
+                  Database
+                </td>
+                <td>
+                  <ul>
+                    <li>
+                      Swiss cottage cheese lancashire. Cauliflower cheese
+                      stinking bishop cheeseburger squirty cheese say cheese
+                      monterey jack ricotta pecorino.
+                    </li>
+                    <li>
+                      Cut the cheese caerphilly cut the cheese fromage
+                      cheesecake pecorino babybel danish fontina. Mozzarella
+                      jarlsberg.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td style="background-color: #f0f0f0; font-weight: bold">
+                  Tools
+                </td>
+                <td>
+                  <ul>
+                    <li>
+                      Cow stilton lancashire. Paneer cheesy grin pecorino
+                      lancashire port-salut goat the big cheese squirty cheese.
+                    </li>
+                    <li>
+                      Paneer manchego queso cauliflower cheese fromage frais
+                      cheesecake cheese triangles blue castello. Cow cow rubber
+                      cheese dolcelatte boursin st. agur blue cheese.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td style="background-color: #f0f0f0; font-weight: bold">
+                  Other Resources
+                </td>
+                <td>
+                  <ul>
+                    <li>
+                      Blue castello mozzarella paneer. Pecorino lancashire
+                      cheddar feta fromage cheese on toast danish fontina who
+                      moved my cheese.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br />
+        <h3>Additional Data – coming soon</h3>
+        <p>
+          Bavarian bergkase chalk and cheese cottage cheese feta boursin fondue
+          hard cheese say cheese. Port-salut cheese slices cheesecake gouda cut
+          the cheese cheese and biscuits danish fontina chalk and cheese. Cheese
+          and wine pecorino. Cottage cheese parmesan camembert de normandie.
+          Melted cheese roquefort bocconcini queso queso mozzarella gouda
+          taleggio. Cow emmental boursin camembert de normandie babybel melted
+          cheese dolcelatte rubber cheese. Manchego fromage frais manchego
+          fondue cheese and biscuits.
+        </p>
+        <br />
+        <h3>Contact</h3>
+        <p>
+          For more information, please contact
+          <a href="mailto:youremailhere@email.com">youremailhere@email.com</a>
+        </p>
+        <br />
+      </div>
+      <div class="add-resources-side" fxFlex="30%">
+        <h3>Recent Data Documents</h3>
+        <div class="recent-data-cnt">
+          <mat-nav-list role="list">
+            <mat-list-item
+              class="recent-data-itm"
+              *ngFor="let data of recentData"
+              role="listitem"
+            >
+              <mat-icon style="color: #a0a0a0" matListIcon>summarize</mat-icon>
+              {{ data }}
+            </mat-list-item>
+          </mat-nav-list>
+        </div>
+        <br />
+        <h3>Top Search Results</h3>
+        <div class="recent-data-cnt">
+          <mat-nav-list role="list">
+            <mat-list-item
+              class="recent-data-itm"
+              *ngFor="let data of recentData"
+              role="listitem"
+            >
+              <mat-icon style="color: #a0a0a0" matListIcon>search</mat-icon>
+              {{ data }}
+            </mat-list-item>
+          </mat-nav-list>
+        </div>
+        <br />
+        <h3>Resources/Guides</h3>
+        <hr />
+        <div>
+          <mat-icon style="color: #a0a0a0">picture_as_pdf</mat-icon>
+          &nbsp;<a href="javascript://nop;">System Guide</a>
+        </div>
+        <div>
+          <mat-icon style="color: #a0a0a0">picture_as_pdf</mat-icon>
+          &nbsp;<a href="javascript://nop;">User Guide</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

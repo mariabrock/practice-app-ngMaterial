@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { NavmenuComponent } from './navmenu/navmenu.component';
 import { LandingComponent } from './landing/landing.component';
+import { MaterialModule } from './material.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { LandingComponent } from './landing/landing.component';
     LandingComponent
   ],
   imports: [
+    MaterialModule,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule
