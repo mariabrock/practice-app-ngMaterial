@@ -28,10 +28,10 @@
       </a>
       <div *ngIf="startedExpanded">
         <a mat-list-item class="nav-itm">
-          <span style="min-width: 30px"></span> Link 1
+          <span style="min-width: 30px"></span> Nav 1
         </a>
         <a mat-list-item class="nav-itm">
-          <span style="min-width: 30px"></span>Link 2
+          <span style="min-width: 30px"></span>Nav 2
         </a>
       </div>
       <a class="nav-itm" mat-list-item (click)="expandMenu('explore')">
@@ -41,13 +41,13 @@
       </a>
       <div *ngIf="exploreExpanded">
         <a mat-list-item class="nav-itm">
-          <span style="min-width: 30px"></span>Link 1
+          <span style="min-width: 30px"></span>Nav 1
         </a>
         <a mat-list-item class="nav-itm">
-          <span style="min-width: 30px"></span>Link 2
+          <span style="min-width: 30px"></span>Nav 2
         </a>
         <a mat-list-item class="nav-itm">
-          <span style="min-width: 30px"></span>Link 3
+          <span style="min-width: 30px"></span>Nav 3
         </a>
       </div>
       <a class="nav-itm" mat-list-item> About </a>
@@ -57,11 +57,11 @@
 </div>
 
 <mat-menu #gettingStarted="matMenu" class="customize">
-  <button class="nav-menu-itm" mat-menu-item>Link 1</button>
-  <button class="nav-menu-itm" mat-menu-item>Link 2</button>
+  <button class="nav-menu-itm" mat-menu-item>Nav 1</button>
+  <button class="nav-menu-itm" mat-menu-item>Nav 2</button>
 </mat-menu>
 <mat-menu #exploreMenu="matMenu" class="customize">
-  <button class="nav-menu-itm" mat-menu-item>Link 3</button>
-  <button class="nav-menu-itm" mat-menu-item>Link 4</button>
-  <button class="nav-menu-itm" mat-menu-item>Link 5</button>
+  <button class="nav-menu-itm" mat-menu-item>Nav 3</button>
+  <button class="nav-menu-itm" mat-menu-item>Nav 4</button>
+  <button class="nav-menu-itm" mat-menu-item>Nav 5</button>
 </mat-menu>

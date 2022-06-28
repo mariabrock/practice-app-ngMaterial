@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  recentData: string[] = ['Document', 'Data', 'More Data', 'Document 2', 'Document 3',
-  'A Third Batch of Data', 'This is Cheese', 'Goat Emmental Roquefort'];
+  cheeseData: string[] = ['Manchego', 'Lancashire', 'Pecorino', 'Jarlsberg', 'Roquefort',
+  'Mascarpone', 'Monterey Jack', 'Paneer'];
+
+  searchResults: string[] = ['Manchego', 'Lancashire', 'Pecorino', 'Jarlsberg', 'Roquefort',
+  'Mascarpone', 'Monterey Jack', 'Paneer'];
 
   constructor() { }
 

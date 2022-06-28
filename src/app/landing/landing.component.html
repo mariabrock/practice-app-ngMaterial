@@ -112,16 +112,16 @@
         <br />
       </div>
       <div class="add-resources-side" fxFlex="30%">
-        <h3>Recent Data Documents</h3>
+        <h3>Recent Documents</h3>
         <div class="recent-data-cnt">
           <mat-nav-list role="list">
             <mat-list-item
               class="recent-data-itm"
-              *ngFor="let data of recentData"
+              *ngFor="let cheese of cheeseData"
               role="listitem"
             >
               <mat-icon style="color: #a0a0a0" matListIcon>summarize</mat-icon>
-              {{ data }}
+              {{ cheese }}
             </mat-list-item>
           </mat-nav-list>
         </div>
@@ -131,11 +131,11 @@
           <mat-nav-list role="list">
             <mat-list-item
               class="recent-data-itm"
-              *ngFor="let data of recentData"
+              *ngFor="let search of searchResults"
               role="listitem"
             >
               <mat-icon style="color: #a0a0a0" matListIcon>search</mat-icon>
-              {{ data }}
+              {{ search }}
             </mat-list-item>
           </mat-nav-list>
         </div>
@@ -144,11 +144,11 @@
         <hr />
         <div>
           <mat-icon style="color: #a0a0a0">picture_as_pdf</mat-icon>
-          &nbsp;<a href="javascript://nop;">System Guide</a>
+          &nbsp;<a href="javascript://nop;">Mozzarella Guide</a>
         </div>
         <div>
           <mat-icon style="color: #a0a0a0">picture_as_pdf</mat-icon>
-          &nbsp;<a href="javascript://nop;">User Guide</a>
+          &nbsp;<a href="javascript://nop;">Parmesan Guide</a>
         </div>
       </div>
     </div>
